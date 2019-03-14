@@ -53,7 +53,7 @@
 
         <!-- Mode: List -->
         <main v-if="mode == 'list'" >
-          <legend class="legend"><b>All Adventures</b></legend>
+          <legend class="legend"><b>All Adventures:</b></legend>
           <ol>
             <li v-for="(item, index) in adventures">{{ (index + 1) + ". " + item }}</li>
           </ol>
