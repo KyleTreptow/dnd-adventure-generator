@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Adventure Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="app" id="app">
+      <section class="section">
+
+        <!-- Nav: Main -->
+        <nav>
+          <ul class="list list--inline">
+            <li><button @click="changeMode('random')">View Random</button></li>
+            <li><button @click="changeMode('list')">View All</button></li>
+            <li><button @click="changeMode('notes')">View Notes</button></li>
+          </ul>
+        </nav>
+
+        <!-- Nav: Sub -->
+        <nav v-if="mode == 'random'">
+          <ul class="list list--inline">
+            <li><button @click="roll()">Roll</button></li>
+            <li><button @click="clear()">Clear</button></li>
+          </ul>
+        </nav>
+
+        <!-- Mode: Random -->
+        <main v-if="mode == 'random'" >
+          <legend class="legend"><b>Random Adventure:</b></legend>
+          <ol v-if="current.length">
+            <li v-for="(item, index) in current">{{ (item ) + ". " + adventures[(item -1)] }}</li>
+          </ol>
+          <p v-else>Roll for a Random Adventure!</p>
+        </main>
+
+        <!-- Mode: List -->
+        <main v-if="mode == 'list'" >
+          <legend class="legend"><b>All Adventures</b></legend>
+          <ol>
+            <li v-for="(item, index) in adventures">{{ (index + 1) + ". " + item }}</li>
+          </ol>
+        </main>
+
+        <!-- Mode: Notes -->
+        <main v-if="mode == 'notes'" >
+          <legend class="legend"><b>Adventure Notes:</b></legend>
+          <p>Structures</p>
+          <p><b>Noun</b> (event/calamity) <b>Verbs</b> (befalls/afflicts) <b>Noun</b> (person/place)</p>
+        </main>
+
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

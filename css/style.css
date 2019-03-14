@@ -1,0 +1,81 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  color: #666;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+button {
+  display: inline-block;
+  line-height: 30px;
+  margin-bottom: 15px;
+  border: solid 2px #ddd;
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 30px;
+}
+button:hover,
+button:focus,
+button:active {
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+}
+
+ol {
+  padding: 0;
+}
+
+ol li {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.list--inline {
+  padding: 0;
+  margin: 0 -7.5px;
+}
+.list--inline li {
+  display: inline-block;
+  padding: 0 7.5px;
+}
+
+.app {
+  min-height: 100vh;
+  background: #eee;
+  padding: 60px 30px;
+}
+
+.section {
+  background: #fff;
+  padding: 30px;
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  border: solid 1px #ddd;
+}
+
+.legend {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0;
+  line-height: inherit;
+}
