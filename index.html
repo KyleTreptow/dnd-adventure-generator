@@ -13,9 +13,24 @@
         <!-- Nav: Main -->
         <nav>
           <ul class="list list--inline">
-            <li><button @click="changeMode('random')">View Random</button></li>
-            <li><button @click="changeMode('list')">View All</button></li>
-            <li><button @click="changeMode('notes')">View Notes</button></li>
+            <li>
+              <button :class="[mode == 'random' ? 'active' : '']"
+              @click="changeMode('random')">
+                View Random
+              </button>
+            </li>
+            <li>
+              <button :class="[mode == 'list' ? 'active' : '']"
+              @click="changeMode('list')">
+                View All
+              </button>
+            </li>
+            <li>
+              <button :class="[mode == 'notes' ? 'active' : '']"
+              @click="changeMode('notes')">
+                View Notes
+              </button>
+            </li>
           </ul>
         </nav>
 
